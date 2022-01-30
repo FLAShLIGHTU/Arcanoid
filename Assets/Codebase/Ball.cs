@@ -37,6 +37,7 @@ public class Ball : MonoBehaviour
     {
       StartBall();
     }
+    
   }
 
  
@@ -55,6 +56,13 @@ public class Ball : MonoBehaviour
   {
     Rb.velocity = Direction.normalized * Speed;
     _isStarted = true;
+  }
+
+  private void OnDrawGizmosSelected()
+  {
+    Gizmos.color = Color.red;
+    Gizmos.DrawRay(transform.position, Direction);
+    
   }
 
   #endregion
