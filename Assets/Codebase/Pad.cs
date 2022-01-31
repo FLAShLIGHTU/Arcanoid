@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Pad : MonoBehaviour
 {
+
+  private int _playerPoints;
+  
+  
   #region Unity lifecycle
 
+  private void Start()
+  {
+    _playerPoints = 0;
+  }
   private void Update()
   {
     Vector3 mousePosition = Input.mousePosition;
@@ -15,6 +23,11 @@ public class Pad : MonoBehaviour
     currentPosition.x = worldPosition.x;
     transform.position = currentPosition;
 
+  }
+
+  private void addPoints(int points)
+  {
+    _playerPoints += points;
   }
 
   #endregion
