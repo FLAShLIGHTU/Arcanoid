@@ -123,3 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 1
+  points: 10
+  sprite1: {fileID: 0}
+  sprite2: {fileID: 0}
+  StatsSo: {fileID: 0}

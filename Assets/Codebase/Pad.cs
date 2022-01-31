@@ -1,18 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pad : MonoBehaviour
 {
 
   private int _playerPoints;
-  
+  private StatsSO _currentPoints;
+  public Text points;
   
   #region Unity lifecycle
 
   private void Start()
   {
-    _playerPoints = 0;
+    points.text = ($"Score {_currentPoints.PlayerStats}");
   }
   private void Update()
   {
@@ -23,11 +26,6 @@ public class Pad : MonoBehaviour
     currentPosition.x = worldPosition.x;
     transform.position = currentPosition;
 
-  }
-
-  private void addPoints(int points)
-  {
-    _playerPoints += points;
   }
 
   #endregion

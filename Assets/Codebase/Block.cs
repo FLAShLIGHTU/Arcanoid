@@ -6,6 +6,7 @@ public class Block : MonoBehaviour
   public int points;
   public Sprite sprite1;
   public Sprite sprite2;
+  private StatsSO StatsSo;
 
   private SpriteRenderer _spriteRenderer;
   private int numberhit;
@@ -21,10 +22,12 @@ public class Block : MonoBehaviour
   {
     ChangeSprite();
     numberhit++;
+    
 
-      if (numberhit == hit)
+    if (numberhit == hit)
       {
         Destroy(gameObject);
+        StatsSo.PlayerStats += points;
       }
   }
 

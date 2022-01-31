@@ -130,5 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 1
+  points: 7
   sprite1: {fileID: 21300000, guid: 23b3737a55322dd4e99d20d80c1cec12, type: 3}
   sprite2: {fileID: 21300000, guid: d9cd685913d9f05469ca016db69ed828, type: 3}
+  StatsSo: {fileID: 0}
